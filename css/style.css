@@ -117,11 +117,15 @@ a {
     padding-top: 20px;
 }
 
+#kartta {
+    border-radius: 10%;
+}
+
 #kuva {
     width: 35%;
     height: 35%;
     position: relative;
-    border-radius: 10%
+    border-radius: 10%;
 }
 
 #esittely {
