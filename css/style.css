@@ -114,7 +114,7 @@ a {
 #toimisto {
     border-bottom: 2px solid black;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 #kuva {
@@ -127,7 +127,7 @@ a {
 #esittely {
     text-align: center;
     padding-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 footer {
