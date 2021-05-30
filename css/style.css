@@ -3,12 +3,14 @@ body {
     color: black;
     font-family: 'Domine', serif;
     font-size: 17.2px;
+
 }
 
 h2 {
     padding-top: 15px;
     padding-bottom: 30px;
     color: rgba(59, 59, 59, 0.815)
+
 }
 
 #otsikko {
@@ -27,9 +29,8 @@ h2 {
     background-size: cover;
     opacity: 0.9;
     width: 100%;
-    height: 500px;
-    
-      
+    height: 500px;  
+
 }
 
 #boksi {
@@ -46,7 +47,6 @@ h2 {
     text-align: center;
     padding-top: 50px;
     font-family: 'Dancing Script', cursive;
-    
 
 }
 
@@ -74,14 +74,12 @@ a {
     color: rgb(0,0,0);
     font-weight: 700;
     font-size: 22px;
-    
-    
-    
+      
 }
 
 #hinnasto {
     text-align: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(59, 59, 59);
     font-weight: 700;
     
 }
