@@ -108,6 +108,7 @@ a {
     font-weight: 400;
     font-size: 15px;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 #toimisto {
@@ -125,6 +126,7 @@ a {
 #esittely {
     text-align: center;
     padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 footer {
@@ -133,7 +135,7 @@ footer {
     font-style: bold;
     font-size: 30px;
     color: white;
-    padding: 5px;
+    padding-top: 20px;
     font-family: 'Libre Baskerville', serif;
 }
 
