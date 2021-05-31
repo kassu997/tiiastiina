@@ -144,6 +144,10 @@ footer {
     font-family: 'Libre Baskerville', serif;
 }
 
+a, footer {
+    color: white;
+}
+
 #tiedot {
     
     font-style: bold;
