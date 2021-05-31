@@ -144,8 +144,9 @@ footer {
     font-family: 'Libre Baskerville', serif;
 }
 
-a, footer {
+#puhelin {
     color: white;
+    font-size: 30px;
 }
 
 #tiedot {
