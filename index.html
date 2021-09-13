@@ -30,10 +30,10 @@
               </button>
               <div class="collapse navbar-collapse" id="navibar">
                 <ul class="navbar-nav  mb-2 mb-lg-0 text-light mx-auto">
-                  <li class="nav-item">
+                  <!--<li class="nav-item">
                     <a class="nav-link" id="navitem" href="./">Etusivu</a>
                   </li>
-                    <!--<li class="nav-item">
+                    <li class="nav-item">
                     <a class="nav-link" id="navitem" href="#esittely">Minä</a>
                   </li> -->
                   <li class="nav-item">
@@ -117,7 +117,7 @@
                  <img src="./css/images/Mobilepay.png" id="logo-mobile"></img>
                  </div>
                 
-             <button type="button"  id="nappula" class="btn" data-bs-dismiss="modal">Sulje</button>
+             <button type="button"  id="nappula" class="btn mx-auto" data-bs-dismiss="modal">Sulje</button>
             
             </div>
               </div>
@@ -165,8 +165,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="colspan-12">
-                      <label for="viesti">Viestisi</label><br>
+                    <div class="col-12">
+                      <label for="viesti" id="viesti">Viestisi</label><br>
                   <textarea  class="form-control" rows="10" columns="30" placeholder="Viestisi" maxlength="6000"></textarea>
                     </div>
                   </div>
@@ -203,13 +203,83 @@
                 </div>
               </div>
               <div class="row mx-auto pt-3">
-               <div class="col-sm-6 overflow-hidden" id="nappi-close">
+               <div class="col-sm-6" id="nappi-close">
                 <button type="button" id="nappi" class="btn" data-bs-dismiss="modal">Sulje</button>
                </div> 
-               <div class="col-sm-6 overflow-hidden mx-auto" id="nappi-send">
-                <button type="button" id="nappi" class="btn">Lähetä</button>
+               <div class="col-sm-6" id="nappi-send">
+                <button type="submit" id="nappi" class="btn">Lähetä</button>
                </div>
-                
+               <div id="success_message" style="width:100%; height:100%; display:none; ">
+                <h3>Kiitos yhteydenotostasi!</h3>
+            </div>
+            <div id="error_message"
+                    style="width:100%; height:100%; display:none; ">
+                        <h3>Virhe</h3>
+            </div>
+            <script>
+              $(function()
+              {
+                  function after_form_submitted(data)
+                  {
+                      if(data.result == 'success')
+                      {
+                          $('form#reused_form').hide();
+                          $('#success_message').show();
+                          $('#error_message').hide();
+                      }
+                      else
+                      {
+                          $('#error_message').append('<ul></ul>');
+              
+                          jQuery.each(data.errors,function(key,val)
+                          {
+                              $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+                          });
+                          $('#success_message').hide();
+                          $('#error_message').show();
+              
+                         
+                          $('button[type="button"]', $form).each(function()
+                          {
+                              $btn = $(this);
+                              label = $btn.prop('orig_label');
+                              if(label)
+                              {
+                                  $btn.prop('type','submit' );
+                                  $btn.text(label);
+                                  $btn.prop('orig_label','');
+                              }
+                          });
+              
+                      }//else
+                  }
+              
+                $('#reused_form').submit(function(e)
+                    {
+                      e.preventDefault();
+              
+                      $form = $(this);
+                      //show some response on the button
+                      $('button[type="submit"]', $form).each(function()
+                      {
+                          $btn = $(this);
+                          $btn.prop('type','button' );
+                          $btn.prop('orig_label',$btn.text());
+                          $btn.text('Sending ...');
+                      });
+              
+              
+                                  $.ajax({
+                              type: "POST",
+                              url: 'handler.php',
+                              data: $form.serialize(),
+                              success: after_form_submitted,
+                              dataType: 'json'
+                          });
+              
+                    });
+              });
+              </script>             
             </div>
               </div>
 
