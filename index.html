@@ -1,74 +1,246 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Domine:wgth@400;700&display=swap" rel="stylesheet">        
-        
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        
-        <title>Urheiluhieroja Tiiastiina</title>
-            <h1 id="otsikko">Urheiluhieroja Tiiastiina</h1>   
-    </head>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@300;400;700;800&display=swap" rel="stylesheet">
+            <link href="css/tyyli.css" rel="stylesheet" type="text/css" />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <title>Urheiluhieroja Tiiastiina</title>
+            <div class="container-fluid"></div>
+              <div class="row">
+                  <div class="mx-auto bg-transparent text-dark">
+                   <h3 id="otsikko">Urheiluhieroja Tiiastiina</h3>
+                  </div>    
+              </div>
+          </div>      
+        </head>
     <body>
-        <nav id="navi">
-            <h3 id="boksi">Ota hetki aikaa itsellesi <br><button><a href="https://nettivaraus5.ajas.fi/ajanvaraus.php?lid=f21dfb51f5be" target="_blank" id="linkkinappi">Varaa aika tästä!</a></button> </h3>
-            
-        </nav>
-        <div id="hinnasto">
-            <h2>Hinnasto</h2>
-                <p> 30 min 30€<br>
-                    <p id="tietoja">Sopiva esim. niska-/hartiaseudun hierontaan tai akuutin kivun lievittämiseen paikallisesti.<br></p>
-                    45 min 35€<br>
-                    <p id="tietoja">Sopiva esim. niskan, hartian ja lapaluiden seudun hierontaan tai esim. pohkeiden ja säärien hierontaan.<br></p>
-                    60 min 40€<br>
-                    <p id="tietoja">Sopiva esim. koko selän hierontaan tai pohkeiden ja takareisien hierontaan.<br></p>
-                    75 min 45€<br>
-                    <p id="tietoja">Sopvia esim. koko selän ja rinnan hierontaan tai esim. pohkeet, takareidet ja pakarat.<br></p>
-                    90 min 50€<br>
-                    <p id="tietoja">Sopiva esim. jalkojen hierontaan tai koko selän, olkapäiden ja rinnan hierontaan.<br></p>
-                    <img src="./css/images/Smartumpay.png" id="logo1"></img>
-                    <img src="./css/images/Edenred.png" id="logo2"></img>
-                    <img src="./css/images/Epassi.jpg" id="logo3"></img>
-                    <img src="./css/images/Eazybreak.png" id="logo4" />
-                </p>
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark" >
+            <div class="container">
+              <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navibar" aria-controls="navibar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navibar">
+                <ul class="navbar-nav  mb-2 mb-lg-0 text-light mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" id="navitem" href="./">Etusivu</a>
+                  </li>
+                    <!--<li class="nav-item">
+                    <a class="nav-link" id="navitem" href="#esittely">Minä</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link"  id="navitem" data-bs-toggle="modal" data-bs-target="#hinnasto">Hinnasto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="navitem" data-bs-toggle="modal" data-bs-target="#palaute">Ota yhteyttä</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        <div id="toimisto">
-            <h2>Toimipiste</h2>
-                <p id="toimipiste">Toimipisteeni sijaitsee Hämeenlinnan keskustassa osoitteessa Palokunnankatu 15.</p>
-                <p id="kartta">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1934.6329174957302!2d24.460942551585894!3d60.9945714821852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468e5d9747084891%3A0xe4d01fd0a364e0b0!2sPalokunnankatu%2015%2C%2013100%20H%C3%A4meenlinna!5e0!3m2!1sfi!2sfi!4v1622411538903!5m2!1sfi!2sfi" width="400" height="300" style="border: transparent;" allowfullscreen="" loading="lazy"></iframe>
-                </p> 
+      </div>
+          </nav>
+          <div class="row">
+          <div id="navi" class="container-fluid mx-auto pt-3 pb-3">
+          <h3 id="boksi">Ota hetki aikaa itsellesi <br><button><a href="https://nettivaraus5.ajas.fi/ajanvaraus.php?lid=f21dfb51f5be" target="_blank" >Varaa aika tästä!</a></button> </h3>
+          </div>     
         </div>
-        <article id="esittely">
-            <h2>Hierojan esittely</h2>
+          <div id="esittely" class="container mx-auto text-style-bold">       
                 <img src="css/images/tiia.jpg" id="kuva" />
-                <p>Olen valmistunut koulutetuksi hierojaksi sekä urheiluhierojaksi heinäkuussa 2019 Carl Wilhelm akatemiasta Tampereelta.<br>
+                <p>Olen valmistunut koulutetuksi hierojaksi sekä urheiluhierojaksi heinäkuussa 2019 Carl Wilhelm akatemiasta Tampereelta.
                     Hieronnalla pyritään auttamaan kehon palautumista, sekä hoitamaan kipua tuottavia ongelmakohtia lihaksessa.
-                    Hieronta on myös hyvä aikalisä itselle arjen keskellä, sillä hieronnalla on stressiä lieventävä ja mieltä rauhoittava vaikutus.<br>
+                    Hieronta on myös hyvä aikalisä itselle arjen keskellä, sillä hieronnalla on stressiä lieventävä ja mieltä rauhoittava vaikutus.
                     Hierojana haluan edistää ihmisten hyvinvointia ja auttaa jaksamista arjessa. Hieronta sopii lähes kaikille ja räätälöin palvelun mahdollisimman hyvin sinun toiveita vastaavaksi. Se voi olla hetki omaa aikaa rentoutuen,kivunlievitystä ongelmakohtaan, tai lihasten liikkuvuuden ylläpitoa. Kerro toiveesi rohkeasti, niin teen parhaani, jotta pääsemme toivottuun tulokseen.
-                    <br>Hieronnassa käytän klassisen hieronnan ja urheiluhieronnan otteita.<br>Voimme lisätä hierontaan myös triggerpistekäsittelyä sekä passiivisia venytyksiä lihakselle.
-                    <br>Ensimmäisellä hoitokerralla aikaan sisältyy esitietolomakkeen tarkistus, ryhtitarkistus ja tarvittaessa liikerata testauksia.<br><br>
+                    Hieronnassa käytän klassisen hieronnan ja urheiluhieronnan otteita. Voimme lisätä hierontaan myös triggerpistekäsittelyä sekä passiivisia venytyksiä lihakselle.
+                    Ensimmäisellä hoitokerralla aikaan sisältyy esitietolomakkeen tarkistus, ryhtitarkistus ja tarvittaessa liikerata testauksia.
                     Mikäli sinulle sopivaa aikaa ei löydy varauskalenterista, niin olethan yhteydessä ja katsotaan mitä voin tehdä.
                     Teen myös koti- ja yrityskäyntejä. Ota yhteyttä sähköpostin kautta, niin löydämme sinun tai yrityksesi tarpeita vastaavan ratkaisun.</p>
-        </article>
-    </body>
+        </div>
+        <div class="modal fade" id="hinnasto" tabindex="-1" aria-labelledby="hinnasto" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title mx-auto" id="hinnasto">Hinnasto</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --> 
+              </div>
+              <div class="modal-body">
+                <div id="hinnasto" class="container-fluid"></div>
+                <div class="row">
+                  <div class=column>
+                    <table class="table table-hover m-1">
+                      <thead>
+                        <th>Kesto</th>
+                        <th>Hinta</th>
+                        <th>Kuvaus</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>30 min</td>
+                          <td>30 €</td>
+                          <td id="tietoja">Sopiva esim. niska-/hartiaseudun hierontaan tai akuutin kivun lievittämiseen paikallisesti.</td>
+                        </tr>
+                        <tr>
+                          <td>45 min</td>
+                          <td>35 €</td>
+                          <td id="tietoja">Sopiva esim. niskan, hartian ja lapaluiden seudun hierontaan tai esim. pohkeiden ja säärien hierontaan.</td>
+                        </tr>
+                        <tr>
+                          <td>60 min</td>
+                          <td>40 €</td>
+                          <td id="tietoja">Sopiva esim. koko selän hierontaan tai pohkeiden ja takareisien hierontaan.</td>
+                        </tr>
+                        <tr>
+                          <td>75 min</td>
+                          <td>45 €</td>
+                          <td id="tietoja">Sopiva esim. koko selän ja rinnan hierontaan tai esim. pohkeet, takareidet ja pakarat.</td>
+                        </tr>
+                        <tr>
+                          <td>90 min</td>
+                          <td>50 €</td>
+                          <td id="tietoja">Sopiva esim. jalkojen hierontaan tai koko selän, olkapäiden ja rinnan hierontaan.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                 <div class="container mx-auto" id="logot">
+                 <img src="./css/images/Smartumpay.png" id="logo-smartum"></img>
+                 <img src="./css/images/Epassi.jpg" id="logo-epassi"></img>
+                 <img src="./css/images/Eazybreak.png" id="logo-eazy"></img>
+                 <img src="./css/images/kortit.png" id="logo-kortit"></img>
+                 <img src="./css/images/Lahimaksu.png" id="logo-lahi"></img>
+                 <img src="./css/images/Mobilepay.png" id="logo-mobile"></img>
+                 </div>
+                
+             <button type="button"  id="nappula" class="btn" data-bs-dismiss="modal">Sulje</button>
+            
+            </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="modal fade" id="palaute" tabindex="-1" role="dialog" aria-labelledby="palaute" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title mx-auto" id="palaute">Yhteydenotto</h5>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="nimi">Nimi</label><br>
+                  <input class="form-control" type="textarea" id="nimi" name="nimi" placeholder="Nimesi" required><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="email">Sähköposti</label><br>
+                  <input class="form-control" type="email" id="email" name="email" placeholder="Sähköpostiosoite" required><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="puh">Puhelinnumero</label><br>
+                  <input  class="form-control" type="tel" id="puh" name="puh" placeholder="040 123 4567 (valinnnainen)"><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="dropdown">Aihe</label><br>
+                        <select  class="form-control" id="aihe" name="aihealue" required>
+                          <option value="none">Valitse aihe</option>
+                          <option value="tarjous">Tarjouspyyntö</option>
+                          <option value="ajat">Ajanvaraus</option>
+                          <option value="muu">Muu aihe</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="colspan-12">
+                      <label for="viesti">Viestisi</label><br>
+                  <textarea  class="form-control" rows="10" columns="30" placeholder="Viestisi" maxlength="6000"></textarea>
+                    </div>
+                  </div>
+                  
+                </form>
+                <form>
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>Toivottu yhdeydenottotapa: </h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <input type="checkbox" id="puh" name="puh" value="Puhelin">
+                      <label for="Puhelin">Puhelin</label><br>
+                    </div>
+                    <div class="col-6">
+                      <input type="checkbox" id="mail" name="mail" value="email">
+                  <label for="email">Sähköposti</label><br>
+                    </div>
+                  </div>
+                  
+                 
+                  
+                  
+                </form>
+              </div>
+              <div class="modal-footer mx-auto">
+                <div class="row">
+                  <div class="col-12">
+                    <input type="checkbox" id="roskaposti" value="roskaposti" required>
+                    <label for="roskaposti">Laita rasti ruutuun varmistaaksesi ettet ole robotti.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mx-auto pt-3">
+               <div class="col-sm-6 overflow-hidden" id="nappi-close">
+                <button type="button" id="nappi" class="btn" data-bs-dismiss="modal">Sulje</button>
+               </div> 
+               <div class="col-sm-6 overflow-hidden mx-auto" id="nappi-send">
+                <button type="button" id="nappi" class="btn">Lähetä</button>
+               </div>
+                
+            </div>
+              </div>
+
+          </div>
+        </div>
+        </body>
     <footer>
-        <h3 id="yhteystiedot">Yhteystiedot</h3>
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-sm-6">
+      <h3 id="yhteystiedot">Yhteystiedot</h3>
         <p id="tiedot">Urheiluhieroja Tiiastiina<br>
         Palokunnankatu 15, 13100 Hämeenlinna<br>
         Tiia Malinen<br>
         <a href="tel:045-261 7270">045-261 7270</a><br>
         koulutettuhieroja.tiiastiina@gmail.com</p>
+        <p>Seuraa myös somessa!</p>
         <a href="https://www.facebook.com/pages/category/Massage-Service/Koulutettu-Hieroja-Urheiluhieroja-Tiiastiina-102553804611041/" target="_blank">  
         <img src="./css/images/facebook.webp" id="fb-logo"  />
         </a>
         <a href="https://www.instagram.com/urheiluhieroja_tiiastiina/?hl=fi" target="_blank">
         <img src="./css/images/Instagram.png" id="fb-logo" />
         </a>
+        </div>
+        <div class="col-sm-6">
+        <p id="kartta" class="overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1934.6329174957302!2d24.460942551585894!3d60.9945714821852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468e5d9747084891%3A0xe4d01fd0a364e0b0!2sPalokunnankatu%2015%2C%2013100%20H%C3%A4meenlinna!5e0!3m2!1sfi!2sfi!4v1622411538903!5m2!1sfi!2sfi" width="400" height="300" style="border: transparent;" allowfullscreen="" loading="lazy"></iframe>
+        </p>
+        </div>
+        </div>
+        </div>
     </footer>
 </html>
+   
