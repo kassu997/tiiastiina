@@ -189,6 +189,15 @@ h2 {
     padding: 20px;
 }
 
+#nappi,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+  -webkit-appearance: button;
+  height: auto;
+  width: auto;
+}
+
 #nappi-send:hover {
     background-color: rgba(42, 250, 0, 0.76);
 }
